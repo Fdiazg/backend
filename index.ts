@@ -13,7 +13,7 @@ server.app.use(bodyParser.urlencoded({extended: true}));
 server.app.use('/', defaultRoutes);
 server.app.use('/frutas', frutaRoutes );
 
-mongoose.connect('mongodb://localhost:27017/akumaNoMiDb', (error) => {
+mongoose.connect('mongodb+srv://usr_akumanomi:akumanomi2022@cluster0.ccrnzgz.mongodb.net/?retryWrites=true&w=majority', (error) => {
     if(error){
         throw error;
     }
