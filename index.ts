@@ -4,8 +4,11 @@ import Server from "./classes/server";
 import defaultRoutes from "./routes/default.routes";
 import frutaRoutes from "./routes/fruta.routes";
 
+const cors = require('cors');
 const server = new Server();
 
+
+server.app.use(cors());
 server.app.use(bodyParser.json());
 server.app.use(bodyParser.urlencoded({extended: true}));
 
