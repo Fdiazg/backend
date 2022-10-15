@@ -8,7 +8,9 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const server_1 = __importDefault(require("./classes/server"));
 const default_routes_1 = __importDefault(require("./routes/default.routes"));
 const fruta_routes_1 = __importDefault(require("./routes/fruta.routes"));
+const cors = require('cors');
 const server = new server_1.default();
+server.app.use(cors());
 server.app.use(body_parser_1.default.json());
 server.app.use(body_parser_1.default.urlencoded({ extended: true }));
 //Rutas de la aplicación
